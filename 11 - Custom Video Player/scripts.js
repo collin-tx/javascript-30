@@ -7,31 +7,31 @@ const skipButtons = player.querySelectorAll('[data-skip]');
 const ranges = player.querySelectorAll('.player__slider');
 
 /* Build out functions */
-function togglePlay() {
+const togglePlay = () => {
   const method = video.paused ? 'play' : 'pause';
   video[method]();
 }
 
-function updateButton() {
+const updateButton = () => {
   const icon = this.paused ? '►' : '❚ ❚';
   console.log(icon);
   toggle.textContent = icon;
 }
 
-function skip() {
+const skip = () => {
  video.currentTime += parseFloat(this.dataset.skip);
 }
 
-function handleRangeUpdate() {
+const handleRangeUpdate = () => {
   video[this.name] = this.value;
 }
 
-function handleProgress() {
+const handleProgress = () => {
   const percent = (video.currentTime / video.duration) * 100;
   progressBar.style.flexBasis = `${percent}%`;
 }
 
-function scrub(e) {
+const scrub = (e) => {
   const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
   video.currentTime = scrubTime;
 }
