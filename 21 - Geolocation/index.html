@@ -12,9 +12,11 @@
     <span class="units">KM/H</span>
   </h1>
   <style>
+   
     html {
       font-size: 100px;
     }    
+    
     body {
       margin: 0;
       font-family: sans-serif;
@@ -32,6 +34,7 @@
       background-size: 16px 16px;
       background-attachment: fixed;
     }
+    
     .arrow {
       width: 250px;
       overflow: hidden;
@@ -39,6 +42,7 @@
       transform: rotate(0deg);
       display: inline-block;
     }
+    
     h1 {
       color: white;
       font-weight: 100;
@@ -49,8 +53,10 @@
     .units {
       font-size: 15px;
     }
+ 
   </style>
   <script>  
+    
     const arrow = document.querySelector('.arrow');
     const speed = document.querySelector('.speed-value');
       navigator.geolocation.watchPosition((data) => {
@@ -60,6 +66,7 @@
       }, (err) => {
         console.error(err);
     });
+    
   </script>
 </body>
 </html>
